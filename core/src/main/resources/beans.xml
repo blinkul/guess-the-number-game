@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
+
+    <bean id="game" class="academy.learnprogramming.GameImpl">
+        <!--Constructor based dependency injection-->
+        <!--<constructor-arg> will inject the id="numberGenerator" bean into the constructor of class -->
+        <!--<constructor-arg ref="numberGenerator"/>-->
+
+        <!--Setter based dependency injection-->
+        <!--name = field/property name from the class-->
+        <!--ref = bean id to be injected in the property-->
+        <!--<property name="numberGenerator" ref="numberGenerator"/>-->
+    </bean>
+
+    <!-- we will be using autowiring instead-->
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
+
+</beans>
