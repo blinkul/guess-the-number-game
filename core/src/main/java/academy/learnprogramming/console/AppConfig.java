@@ -1,11 +1,11 @@
-package academy.learnprogramming;
+package academy.learnprogramming.console;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "academy.learnprogramming")
+@ComponentScan(basePackages = "academy/learnprogramming/console")
 public class AppConfig {
 
     // == bean methods ==
@@ -17,6 +17,11 @@ public class AppConfig {
     @Bean
     public Game game(){
         return new GameImpl();
+    }
+
+    @Bean
+    public MessageGenerator messageGenerator() {
+        return new MessageGeneratorImpl();
     }
 
 }

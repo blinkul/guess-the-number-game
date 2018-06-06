@@ -1,9 +1,8 @@
-package academy.learnprogramming;
+package academy.learnprogramming.console;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -11,6 +10,7 @@ import javax.annotation.PreDestroy;
 public class GameImpl implements Game {
 
     // == constants ==
+    @SuppressWarnings(value = "unused")
     public static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // == fields ==

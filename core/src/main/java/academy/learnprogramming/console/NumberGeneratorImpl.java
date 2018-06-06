@@ -1,6 +1,4 @@
-package academy.learnprogramming;
-
-import org.springframework.stereotype.Component;
+package academy.learnprogramming.console;
 
 import java.util.Random;
 

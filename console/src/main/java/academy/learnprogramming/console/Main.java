@@ -1,5 +1,4 @@
-package academy.learnprogramming;
-
+package academy.learnprogramming.console;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,10 +24,10 @@ public class Main {
         //log number
         log.info("number = {}", number);
 
-        // get the Game bean from the context
-        Game game = context.getBean(Game.class);
-
-//        game.reset();
+        // get the message generator bean from the context
+        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+        log.info("getMainMessage = {}", messageGenerator.getMainMessage());
+        log.info("getResultMessage = {}", messageGenerator.getResultMessage());
 
         //close context
         context.close();
